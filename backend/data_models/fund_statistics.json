@@ -1,0 +1,38 @@
+{
+    "title": "fund_statistics",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "total_collected": {
+            "type": "number",
+            "description": "Total amount collected in the fund"
+        },
+        "total_disbursed": {
+            "type": "number",
+            "description": "Total amount disbursed in assistance"
+        },
+        "current_balance": {
+            "type": "number",
+            "description": "Current fund balance"
+        },
+        "active_members": {
+            "type": "integer",
+            "description": "Number of active members"
+        },
+        "updated_at": {
+            "type": "string",
+            "description": "Last update timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "total_collected",
+        "total_disbursed",
+        "current_balance",
+        "active_members",
+        "updated_at"
+    ]
+}

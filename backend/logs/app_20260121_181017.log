@@ -1,0 +1,107 @@
+2026-01-21 18:10:17,920 - main - INFO - === Logging system initialized ===
+2026-01-21 18:10:17,921 - main - INFO - Log file: logs/app_20260121_181017.log
+2026-01-21 18:10:17,921 - main - INFO - Log level: INFO
+2026-01-21 18:10:17,921 - main - INFO - Timestamp: 20260121_181017
+2026-01-21 18:10:17,962 - main - WARNING - Failed to import module 'routers.admin': cannot import name 'FundStatistics' from 'models.fund_statistics' (/workspace/app/backend/models/fund_statistics.py)
+2026-01-21 18:10:18,063 - main - INFO - Included router: routers.admins.router
+2026-01-21 18:10:18,848 - main - INFO - Included router: routers.aihub.router
+2026-01-21 18:10:18,861 - main - INFO - Included router: routers.auth.router
+2026-01-21 18:10:18,979 - main - INFO - Included router: routers.class_upgrades.router
+2026-01-21 18:10:19,051 - main - INFO - Included router: routers.contributions.router
+2026-01-21 18:10:19,099 - main - INFO - Included router: routers.documents.router
+2026-01-21 18:10:19,136 - main - INFO - Included router: routers.fund_statistics.router
+2026-01-21 18:10:19,138 - main - INFO - Included router: routers.health.router
+2026-01-21 18:10:19,166 - main - WARNING - Failed to import module 'routers.payments': cannot import name 'RepaymentInstallments' from 'models.repayment_installments' (/workspace/app/backend/models/repayment_installments.py)
+2026-01-21 18:10:19,217 - main - INFO - Included router: routers.payouts.router
+2026-01-21 18:10:19,264 - main - INFO - Included router: routers.profiles.router
+2026-01-21 18:10:19,270 - main - WARNING - Failed to import module 'routers.public': cannot import name 'SuccessStories' from 'models.success_stories' (/workspace/app/backend/models/success_stories.py)
+2026-01-21 18:10:19,317 - main - INFO - Included router: routers.repayment_installments.router
+2026-01-21 18:10:19,370 - main - INFO - Included router: routers.repayments.router
+2026-01-21 18:10:19,432 - main - INFO - Included router: routers.requests.router
+2026-01-21 18:10:19,455 - main - INFO - Included router: routers.settings.router
+2026-01-21 18:10:19,492 - main - INFO - Included router: routers.storage.router
+2026-01-21 18:10:19,528 - main - INFO - Included router: routers.success_stories.router
+2026-01-21 18:10:19,539 - main - INFO - Included router: routers.user.router
+2026-01-21 18:10:19,541 - main - INFO - === Application startup initiated ===
+2026-01-21 18:10:19,542 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-01-21 18:10:19,542 - services.database - INFO - 🔧 Starting database initialization...
+2026-01-21 18:10:19,542 - core.database - INFO - Starting database initialization...
+2026-01-21 18:10:19,542 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-01-21 18:10:19,543 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-01-21 18:10:19,543 - core.database - INFO - Creating async database engine...
+2026-01-21 18:10:19,544 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-01-21 18:10:19,701 - core.database - INFO - Database engine created successfully
+2026-01-21 18:10:19,702 - core.database - INFO - Creating async session maker...
+2026-01-21 18:10:19,702 - core.database - INFO - Async session maker created successfully
+2026-01-21 18:10:19,702 - core.database - INFO - Database connection initialized successfully
+2026-01-21 18:10:19,702 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-01-21 18:10:19,702 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-01-21 18:10:19,702 - core.database - INFO - 🔧 Starting table creation...
+2026-01-21 18:10:21,578 - core.database - INFO - Tables initialized successfully
+2026-01-21 18:10:21,578 - core.database - DEBUG - [DB_OP] Create tables completed in 1.8762s
+2026-01-21 18:10:21,638 - services.database - INFO - 🔧 Table creation completed
+2026-01-21 18:10:21,638 - services.database - INFO - Database initialized successfully
+2026-01-21 18:10:21,638 - services.database - DEBUG - [DB_OP] Database initialization completed in 2.0968s
+2026-01-21 18:10:21,639 - services.mock_data - INFO - mock_data directory not found, skipping mock initialization
+2026-01-21 18:10:21,639 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-01-21 18:10:21,639 - services.database - INFO - 🔧 Starting database initialization...
+2026-01-21 18:10:21,639 - core.database - INFO - Starting database initialization...
+2026-01-21 18:10:21,640 - core.database - INFO - Database already initialized
+2026-01-21 18:10:21,640 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-01-21 18:10:21,640 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-01-21 18:10:21,640 - core.database - INFO - Tables already initialized
+2026-01-21 18:10:21,640 - services.database - INFO - 🔧 Table creation completed
+2026-01-21 18:10:21,640 - services.database - INFO - Database initialized successfully
+2026-01-21 18:10:21,640 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0012s
+2026-01-21 18:10:21,640 - core.config - DEBUG - Read dynamic attribute admin_user_id from environment variable ADMIN_USER_ID
+2026-01-21 18:10:21,641 - core.config - DEBUG - Read dynamic attribute admin_user_email from environment variable ADMIN_USER_EMAIL
+2026-01-21 18:10:22,057 - services.auth - DEBUG - Admin user 715788 already exists
+2026-01-21 18:10:22,116 - main - INFO - === Application startup completed successfully ===
+2026-01-21 18:10:25,063 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-01-21 18:10:25,063 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-01-21 18:10:25,073 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:10:25,579 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:10:25,580 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-01-21 18:10:25,580 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-01-21 18:10:25,581 - routers.profiles - DEBUG - Querying profiless: query=None, sort=None, skip=0, limit=1, fields=None
+2026-01-21 18:10:26,052 - routers.profiles - DEBUG - Found 0 profiless
+2026-01-21 18:10:26,052 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4720s
+2026-01-21 18:12:30,137 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:12:30,362 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:12:30,363 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-01-21 18:12:30,363 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-01-21 18:12:30,363 - routers.profiles - DEBUG - Querying profiless: query=None, sort=None, skip=0, limit=1, fields=None
+2026-01-21 18:12:30,716 - routers.profiles - DEBUG - Found 0 profiless
+2026-01-21 18:12:30,717 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3548s
+2026-01-21 18:14:59,061 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:14:59,263 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:14:59,264 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-01-21 18:14:59,264 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-01-21 18:14:59,264 - routers.profiles - DEBUG - Querying profiless: query=None, sort=None, skip=0, limit=1, fields=None
+2026-01-21 18:14:59,615 - routers.profiles - DEBUG - Found 0 profiless
+2026-01-21 18:14:59,615 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3517s
+2026-01-21 18:15:59,901 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:16:00,092 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:16:00,092 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-01-21 18:16:00,092 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-01-21 18:16:00,093 - routers.profiles - DEBUG - Querying profiless: query=None, sort=None, skip=0, limit=1, fields=None
+2026-01-21 18:16:00,561 - routers.profiles - DEBUG - Found 0 profiless
+2026-01-21 18:16:00,562 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4697s
+2026-01-21 18:17:00,739 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:17:00,905 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:17:00,906 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-01-21 18:17:00,906 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-01-21 18:17:00,907 - routers.profiles - DEBUG - Querying profiless: query=None, sort=None, skip=0, limit=1, fields=None
+2026-01-21 18:17:01,259 - routers.profiles - DEBUG - Found 0 profiless
+2026-01-21 18:17:01,260 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3540s
+2026-01-21 18:17:54,409 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:17:55,110 - core.auth - DEBUG - Authentication token validated for user hash: 7001fcbb
+2026-01-21 18:17:55,110 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-01-21 18:17:55,110 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-01-21 18:17:55,111 - routers.profiles - DEBUG - Querying profiless: query=None, sort=None, skip=0, limit=1, fields=None
+2026-01-21 18:17:55,463 - routers.profiles - DEBUG - Found 0 profiless
+2026-01-21 18:17:55,464 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3543s
+2026-01-21 18:18:45,194 - services.database - DEBUG - [DB_OP] Starting database close
+2026-01-21 18:18:45,256 - core.database - INFO - Database connection closed and engine disposed
+2026-01-21 18:18:45,256 - services.database - INFO - Database connections closed
+2026-01-21 18:18:45,256 - services.database - DEBUG - [DB_OP] Database close completed in 0.0625s

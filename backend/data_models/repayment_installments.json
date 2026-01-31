@@ -1,0 +1,50 @@
+{
+    "title": "repayment_installments",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "repayment_id": {
+            "type": "integer",
+            "description": "Reference to repayments table"
+        },
+        "installment_number": {
+            "type": "integer",
+            "description": "Installment number (1-12)"
+        },
+        "amount": {
+            "type": "number",
+            "description": "Installment amount"
+        },
+        "due_date": {
+            "type": "string",
+            "description": "Due date for this installment"
+        },
+        "paid_date": {
+            "type": "string",
+            "description": "Date when paid"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status: pending, paid, overdue"
+        },
+        "stripe_payment_id": {
+            "type": "string",
+            "description": "Stripe payment ID"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

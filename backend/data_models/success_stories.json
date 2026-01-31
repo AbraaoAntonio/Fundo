@@ -1,0 +1,38 @@
+{
+    "title": "success_stories",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "member_name": {
+            "type": "string",
+            "description": "Member name (can be anonymous)"
+        },
+        "story": {
+            "type": "string",
+            "description": "Success story text"
+        },
+        "amount_received": {
+            "type": "number",
+            "description": "Amount received in assistance"
+        },
+        "is_published": {
+            "type": "boolean",
+            "description": "Whether story is published"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "member_name",
+        "story",
+        "amount_received",
+        "is_published",
+        "created_at"
+    ]
+}

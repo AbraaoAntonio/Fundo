@@ -1,0 +1,54 @@
+{
+    "title": "payouts",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "request_id": {
+            "type": "integer",
+            "description": "Reference to requests table"
+        },
+        "amount": {
+            "type": "number",
+            "description": "Payout amount"
+        },
+        "recipient_type": {
+            "type": "string",
+            "description": "Type: lawyer, court, member"
+        },
+        "recipient_name": {
+            "type": "string",
+            "description": "Recipient name"
+        },
+        "recipient_account": {
+            "type": "string",
+            "description": "Recipient account details"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status: pending, processed, failed"
+        },
+        "stripe_payout_id": {
+            "type": "string",
+            "description": "Stripe payout ID"
+        },
+        "processed_at": {
+            "type": "string",
+            "description": "Processing timestamp"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

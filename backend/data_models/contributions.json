@@ -1,0 +1,46 @@
+{
+    "title": "contributions",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "profile_id": {
+            "type": "integer",
+            "description": "Reference to profiles table"
+        },
+        "contribution_type": {
+            "type": "string",
+            "description": "Type: join_fee, monthly_class_a, monthly_class_b, monthly_class_c, monthly_class_d"
+        },
+        "amount": {
+            "type": "number",
+            "description": "Payment amount"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status: pending, paid, failed"
+        },
+        "payment_date": {
+            "type": "string",
+            "description": "Date of payment"
+        },
+        "stripe_payment_id": {
+            "type": "string",
+            "description": "Stripe payment ID"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

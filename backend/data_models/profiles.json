@@ -1,0 +1,60 @@
+{
+    "title": "profiles",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID from authentication system"
+        },
+        "full_name": {
+            "type": "string",
+            "description": "Full name of the member"
+        },
+        "phone": {
+            "type": "string",
+            "description": "Phone number"
+        },
+        "membership_class": {
+            "type": "string",
+            "description": "Membership class (A, B, C, or D)"
+        },
+        "account_status": {
+            "type": "string",
+            "description": "Account status (pending_join_fee, active, paused)"
+        },
+        "consecutive_months_paid": {
+            "type": "integer",
+            "description": "Number of consecutive months paid"
+        },
+        "months_late": {
+            "type": "integer",
+            "description": "Number of months late on payment"
+        },
+        "stripe_subscription_id": {
+            "type": "string",
+            "description": "Stripe subscription ID for recurring payments"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        },
+        "updated_at": {
+            "type": "string",
+            "description": "Last update timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "full_name",
+        "phone",
+        "membership_class",
+        "account_status",
+        "created_at",
+        "updated_at"
+    ]
+}

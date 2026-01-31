@@ -1,0 +1,46 @@
+{
+    "title": "class_upgrades",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "profile_id": {
+            "type": "integer",
+            "description": "Reference to profiles table"
+        },
+        "from_class": {
+            "type": "string",
+            "description": "Current class"
+        },
+        "to_class": {
+            "type": "string",
+            "description": "Target class"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status: pending, active"
+        },
+        "payments_in_new_class": {
+            "type": "integer",
+            "description": "Number of payments made in new class"
+        },
+        "requested_at": {
+            "type": "string",
+            "description": "Request timestamp"
+        },
+        "activated_at": {
+            "type": "string",
+            "description": "Activation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

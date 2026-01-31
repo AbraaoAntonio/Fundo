@@ -1,0 +1,66 @@
+{
+    "title": "requests",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "profile_id": {
+            "type": "integer",
+            "description": "Reference to profiles table"
+        },
+        "request_type": {
+            "type": "string",
+            "description": "Type: bail, legal_fees"
+        },
+        "requested_amount": {
+            "type": "number",
+            "description": "Amount requested"
+        },
+        "approved_amount": {
+            "type": "number",
+            "description": "Amount approved by admin"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status: pending, approved, rejected, completed"
+        },
+        "payout_type": {
+            "type": "string",
+            "description": "Payout type: lawyer, court, member"
+        },
+        "payout_recipient_name": {
+            "type": "string",
+            "description": "Name of payout recipient"
+        },
+        "payout_recipient_account": {
+            "type": "string",
+            "description": "Account details for payout"
+        },
+        "description": {
+            "type": "string",
+            "description": "Request description"
+        },
+        "admin_notes": {
+            "type": "string",
+            "description": "Admin notes on the request"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        },
+        "updated_at": {
+            "type": "string",
+            "description": "Last update timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

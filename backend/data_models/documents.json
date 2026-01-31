@@ -1,0 +1,38 @@
+{
+    "title": "documents",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "request_id": {
+            "type": "integer",
+            "description": "Reference to requests table"
+        },
+        "document_type": {
+            "type": "string",
+            "description": "Type: id, proof_of_incident, legal_document"
+        },
+        "file_name": {
+            "type": "string",
+            "description": "File name"
+        },
+        "file_url": {
+            "type": "string",
+            "description": "URL to the file"
+        },
+        "uploaded_at": {
+            "type": "string",
+            "description": "Upload timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

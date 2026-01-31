@@ -1,0 +1,54 @@
+{
+    "title": "repayments",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "request_id": {
+            "type": "integer",
+            "description": "Reference to requests table"
+        },
+        "total_to_repay": {
+            "type": "number",
+            "description": "Total amount to repay (approved * 1.02)"
+        },
+        "installments": {
+            "type": "integer",
+            "description": "Number of installments (up to 12)"
+        },
+        "installment_amount": {
+            "type": "number",
+            "description": "Amount per installment"
+        },
+        "paid_installments": {
+            "type": "integer",
+            "description": "Number of installments paid"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status: active, completed, defaulted"
+        },
+        "next_due_date": {
+            "type": "string",
+            "description": "Next payment due date"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        },
+        "updated_at": {
+            "type": "string",
+            "description": "Last update timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}
