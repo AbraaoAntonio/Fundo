@@ -99,14 +99,27 @@ class DatabaseManager:
 
         try:
             logger.info("Normalizing database URL for async compatibility...")
-            database_url = self._normalize_async_database_url(settings.database_url)
+            # Normalize + strip whitespace to avoid hidden \n issues from env vars
+database_url = self._normalize_async_database_url(settings.database_url).strip()
+
+# Detect Supabase pooler (PgBouncer). Pooler usually uses port 6543 or host contains pooler.supabase.com
+try:
+    parsed = make_url(database_url)
+    host = (parsed.host or "").lower()
+    using_pgbouncer = ("pooler.supabase.com" in host) or (parsed.port == 6543)
+except Exception:
+    using_pgbouncer = False
+            "database_url = self._normalize_async_database_url(settings.database_url)"
 
             logger.info("Creating async database engine...")
             # Configure engine based on environment (Lambda vs non-Lambda)
             engine_kwargs = {
                 "echo": settings.debug,
             }
-
+        # PgBouncer + asyncpg requires statement cache disabled
+        if using_pgbouncer:
+            engine_kwargs["connect_args"] = {"statement_cache_size": 0}
+            logger.info("Detected PgBouncer/Supabase pooler: setting statement_cache_size=0 for asyncpg compatibility")
             # Check if we're in a Lambda environment
             is_lambda = bool(
                 os.environ.get("AWS_LAMBDA_FUNCTION_NAME")
