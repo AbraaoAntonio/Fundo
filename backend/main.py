@@ -15,7 +15,7 @@ from services.database import initialize_database, close_database
 from services.mock_data import initialize_mock_data
 from services.auth import initialize_admin_user
 # MODULE_IMPORTS_END
-
+logger = logging.getLogger(__name__)
 
 def setup_logging():
     """Configure the logging system."""
@@ -149,14 +149,15 @@ def include_routers_from_package(app: FastAPI, package_name: str = "routers") ->
 setup_logging()
 include_routers_from_package(app, "routers")
 
-
-@app.get("/")
-def root():
+@app.get("/", include_in_schema=False)
+async def root():
+    # Render may send HEAD/GET requests to "/"
     return {"message": "FastAPI Modular Template is running"}
 
 
-@app.get("/health")
-def health_check():
+@app.get("/health", include_in_schema=False)
+async def health_check():
+    # Point Render Health Check Path to "/health"
     return {"status": "healthy"}
 
 
